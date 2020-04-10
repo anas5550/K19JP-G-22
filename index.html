@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to Red Pizza</title>
+<style>
+	body{
+	background:url("img.jpg");
+	background-repeat:no-repeat;
+	width:99%;
+	height:100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	}
+.dropdown{/* class dropdown is used to give style to dropdown MENU */
+  width: 100%;
+  height: 100px;
+  margin: 0px auto;
+  border: 100%;
+		}
+
+.dropdown ul/* class dropdown is used to give style to dropdown MENU */
+{
+padding:0px;
+}
+
+.dropdown ul li/* class dropdown is used to give style to dropdown MENU */
+{ 
+list-style: none;
+float: left;
+color: white;
+width:333px;
+height: 50px;
+line-height: 50px;
+text-align: center;
+font-size: 25px;
+background-color: black;
+
+}
+.dropdown ul li ul{
+/* class dropdown is used to give style to dropdown MENU */
+	display:none;
+
+}
+.dropdown ul li:hover>ul{
+/* class dropdown is used to give style to dropdown MENU */
+	display: block;
+
+}
+.dropdown ul li:hover{
+/* class dropdown is used to give style to dropdown MENU */
+	color:red;
+	background-color: skyblue;
+	
+}
+marquee{
+/* For marquee tag*/
+	color:red;
+	font-size: 25px;
+	font-family:fantasy;
+	
+}
+.AccountInfo{
+/*AccountInfo class is used to give the style aboubt Acount information which is shown at the top right side of the page. i.e., Already have an account & Don't have an account */
+	color: #00ff99;
+	font-size: 15px;
+}
+.foot{
+	/*foot class is used to give the style Footer*/
+	color: #5C6F83;
+	background-color: #1A2735;
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 3px;
+	word-spacing: 3px;
+}
+.order{
+/*Order class is used for Heading like- 
+Order description, Qunatity, Address and Payment Methods*/
+	color:#489BAB;
+	background-color: black;
+	font-size: 25px;
+	width: 100%;
+}
+.order:hover{
+	color:yellow
+}
+.orderDescriptionHeading{
+	color:#489BAB;
+	background-color: black;
+	font-size:30px;
+	width: 240px;
+	line-height: 30px;
+	margin-bottom: 15px;
+
+}
+
+
+.select{
+/*Select class is used to make a selection list in which a lot of options are there to choose. Here we have Payment method as a select class*/
+	color:red;
+	font-size: 25px;
+	width: 23%;
+}
+.insideorder{
+/*insideorder class is used user input attractive. which will reflect in Order description, Qunatity & Address*/
+	color: red;
+	font-size: 25px;
+}
+.about1{
+/*about 1 class is for heading :-About us*/
+	color: #ccffff;
+	font-size: 25px;
+	background-color:black;
+	min-height:20px;
+	width:115px;
+}
+.about2{
+/*about 2 class is for data writen under the heading of:-About us*/
+	color: orange;
+	font-size: 25px;
+	background-color: black;
+	width: 100%;
+}
+.login{
+/*for login button*/
+	font-size: 20px;
+	color:yellow;
+}
+.login:hover{
+	color:#0085DF;
+}
+.scrpt{
+/*With this A prompt box will open and it Show Message "Enter your Name"  & after it will show the same name as entered. */
+	font-size:40px;
+	color:yellow;
+	font-family:Harlow Solid;
+}
+.gmapHeading/*For Google Map Heading*/
+{
+	color: red;
+	text-align: center;
+	font-size: 40px;
+	background-color: black;
+	width: 400px;
+	line-height: 50px;
+	margin-top: 30px;
+}
+.gmap{
+				/*for Google Map*/
+	min-height:220px;
+	min-width:80%;
+	color: white;
+	font-size: 40px;
+	margin-top: 20px;
+}
+.off{
+	/*for the Heading offer zone*/
+	color: #00ff99;
+	font-size: 20px;
+}
+.logo{
+/*for the Red Pizza logo which is visible at the top of the web page*/
+	width:200px;
+	height:100px;
+	padding:20px;
+	float:left;
+	transform:scale(1);
+	transition-property:width;
+	transform:translateY(0px);
+	transition-duration:5s,5s;
+	transition:transform 4s,4s;
+}
+.logo:hover{
+
+	width:300px;
+	transform:translateY(-30px);
+
+}
+.online{
+/*class online is used to make the heading " Online Pizza Ordering Store" stylish */
+	color:yellow;
+	font-size: 50px;
+	padding: 200px;
+	float:center;
+
+}
+.count{
+/*for the class count.with the help of this we will count Total no of visitors.
+NOTE:-Number of Visitor will only show when there is Internet Connection*/
+	float: right;
+	color: #DFC00B;
+	font-size: 40px;
+	font-family: fantasy;
+	background-color: black;
+}
+.bottom{	
+	font-size: 25px;
+	height:300px;
+	width: 96%;
+	color:white;
+	background-color: red;
+}
+	input[type=submit], input[type=reset]{
+	border-radius: 100px;
+	text-align: center;
+	width:150px;
+	height:30px;
+	line-height: 20px;
+	color:white;
+	background-color: green;
+	margin-right: 10px;
+	margin-top: 10px;
+	float: right;
+}
+}</style>
+<!--Here CSS Ends -->
+
+</head>
+<body>
+<marquee>Welcome To <i>Red</i> Pizza<sup>&reg;</sup></marquee>
+<!--A continuous Message will floating at the top of the web page.,which is-- Welcomen to Red Pizza-->
+<img src="logo.jpg" class="logo">
+<label class="online">Online Pizza Ordering Store
+</label>
+<div align="right">
+<!--With this A prompt box will open and it Show Message "Enter your Name"  & after it will show the same name as entered. -->
+	<!--<label  class="scrpt"><script>
+	var x=prompt("Enter Your Name:");
+	document.write("Hello Mr. " + x);
+	</script></label>--><br>
+<sub class="AccountInfo">Already have an account
+</sub>
+
+<a href="sign up.html" class="login">Login</a>  <br>
+<sub class="AccountInfo">Don't have an account</sub>
+<a href="sign in.html" class="login">Sign Up</a></div><br>
+<div class="off">Offer Zone</div>
+
+<div class="dropdown">
+<ul>
+	<li>Pizza Types
+		<ul>
+			<li>Veg Pizza</li>
+			<li>Non-Veg Pizza</li>
+			<li>Deal Of the Day Mix</li>
+		</ul>
+	</li>
+		<li>Location</li>
+		<li>Contact Us</li>
+		<li>Cart</li>
+</ul>
+
+	</div><br><br><br><br><br><br>
+<div class="orderDescriptionHeading">Order Description :</div>
+<form class="order">
+	<label class="order" for="Quantity">Quantity</label>
+<input type="number" placeholder="Enter the Quantity "min=0 required class="insideorder" id="Quantity">
+<label class="order" for="address" >Address</label>
+<input type="text" name="address"placeholder="Enter the Address..." class="insideorder" id="address" required>
+<label class="order" for="Payment" >Payment Methods</label>
+	<select class="select"  id="Payment">
+		<option >Select</option>
+		<optgroup label="Debit Card">
+		<option>SBI</option>
+		<option>HDFC</option>
+		<option>Canara</option>
+		<option>Axis bank</option>
+		<option>Bank Of Baroda</option>
+		<optgroup label="UPI/Wallet-">
+		<option>PAYTM</option>
+		<option>Google Pay</option>
+		<option>Freecharge</option>
+		<option>Phone Pay</option>
+		<option>Amazon Pay</option>
+	</select>
+			<input type="reset" >
+			<input type="submit" >
+</form>	
+
+<br>	
+	<div class="gmapHeading">See Us On Google Map</div>
+<div align="center">
+<fieldset class="gmap">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3410.7571681025397!2d75.70279991447565!3d31.255144967319094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a594d22b88d%3A0x4cc934c58d0992ec!2sLovely%20Professional%20University!5e0!3m2!1sen!2sin!4v1583821594570!5m2!1sen!2sin" frameborder="0" allowfullscreen=" " class="gmap"></iframe></div>
+</fieldset><br><br>
+
+<div class="count">Number Of Visitors Visitors
+<!--Number of Visitor will only show when there is Internet Connection-->
+			<!--For Number of Visitor-->
+<img src="https://hitwebcounter.com/counter/counter.php?page=7215403&style=0005&nbdigits=4&type=page&initCount=0" title="User Stats" Alt="PHP Hits Count" border="0" >
+</div>
+
+<div class="about1">About Us:-</div><br>
+<div class="about2"><p>Red Pizza is Founded in 2015. We are delevering quality products.We provide frenchise at effective price.Headquarters is in California Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p></div><br>
+<table align="center">
+
+<footer align="center" class="foot">
+	All Rights Reserved. Copyright © RED Pizza Ltd.
+</footer>
+</html>
